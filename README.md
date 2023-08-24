@@ -114,4 +114,4 @@ The different routes can be checked inside app-routing.module.ts. The specific c
     fetch the value of this token through session storage and sent it as part of their authorization header.
 
 3. Basic Authentication:
-   Principle: 
+   Principle: A Base 64 encoded(username + password ) combination is sent each time with api requests to the backend so as to authorize the correct credentials are entered at the time of login and the authorized user only performs all other actions.
