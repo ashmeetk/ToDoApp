@@ -133,4 +133,4 @@ The different routes can be checked inside app-routing.module.ts. The specific c
       Inside login.component.html, uncomment line 9 containing handleBasicAuthLogin() method and comment line 10: handleJWTAuthLogin() method.
 
 # CORS 
-  For CORS configuration, check SpringSecurityConfigurationBasicAuth java class. I don't think for JWT, we use CORS configuration.
+  For CORS configuration, check SpringSecurityConfigurationBasicAuth java class. I don't think for JWT, we use CORS configuration from this file, only declaring @CrossOrigin at the top of controllers is enough.
