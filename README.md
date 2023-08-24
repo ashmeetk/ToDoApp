@@ -108,9 +108,10 @@ The different routes can be checked inside app-routing.module.ts. The specific c
 # Tyes of Authentication:
 
 1. JWT Authentication:
-   Current project is using JWT Authentication. We don't need to change anything.
+  Currently, the project is using JWT Authentication. We don't need to change anything.
   Principle: A JWT token is fetched from backend at the time of login and sent each time other APIs are invoked in the authorization header.
-  
+  Implementation: executeJWTAuthenticationService() method inside JWTAuthenticationService fetches JWT token at the time of login and stores it in session-storage. Other api's   
+    fetch the value of this token through session storage and sent it as part of their authorization header.
 
 3. Basic Authentication:
    Principle: 
