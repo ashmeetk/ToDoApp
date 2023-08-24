@@ -85,7 +85,7 @@ Authorization: Select Bearer token and in token field paste the JWT token that w
 # Frontend using AngularJS:
 To start angular application, type ng serve and search http://localhost:4200/ in chrome. Password('dummy') is pre-filled in by default. Press enter to login into app. 
 
-Components used:
+# Components used:
 1. Menu component - Only 'Login' option is shown if user hasn't logged in or has logged out. Once user logs in, 'Home', 'Todos', and 'Logout' options start showing. For it to be shown across all pages, this component is embedded in app.component.html.
 2. Footer component - For it to be shown across all pages, this component is embedded in app.component.html.
 3. Error - In case an incorrect path is entered on chrome, error page is shown.
@@ -95,16 +95,22 @@ Components used:
 7. login - We can use basic login or JWT login for logging in.
 8. logout - once user clicks on logout, all the session storage variables, JWT token in case of JWT Auth, Basic Authentication token in case of basic Auth are deleted.
 
-Services used: 
+# Services used: 
 1. todo-data.service.ts: It uses http to invoke put, post, get, delete todo api's from backend(TodoJpaResource).
 2. welcome-data.service.ts: It uses http to invoke get api from backend(HelloWorldController).
 3. basic-authentication.service.ts: intercepts all http requests and adds the basicAuthHeaderString to the request before it is sent to server, so that the request will go through successfully in case Basic Auth is enabled.
 4. jwt-authentication.service.ts: At the time of login, executeJWTAuthenticationService() method is responsible for sending /authenticate request to backend to fetch a JWT token. So that all the api's invoked after user login would be able to use this token.
 5. route-guard.service.ts - Explained in section below.
 
-Routing (app-routing.module.ts): 
+# Routing (app-routing.module.ts): 
 The different routes can be checked inside app-routing.module.ts. The specific component is embedded in app.component.ts as <router-outlet> is embedded there. If the user hasn't logged in and is trying to access welcome or todos or logout route, he will be prevented for doing so with the help of RouteGuardService and will be routed instead to login component. For this you can check route-guard.service.ts.
 
-Tyes of Authentication:
-1. Basic Authentication:
-2. JWT Authentication: 
+# Tyes of Authentication:
+
+1. JWT Authentication:
+   Current project is using JWT Authentication. We don't need to change anything.
+  Principle: A JWT token is fetched from backend at the time of login and sent each time other APIs are invoked in the authorization header.
+  
+
+3. Basic Authentication:
+   Principle: 
