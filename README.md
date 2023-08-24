@@ -1,5 +1,5 @@
 # ToDoApp
-A todo app is generated using Spring Boot and Angular JS which talks to in-memory H2 database to perform CRUD operations on todo table. This application has implemented both JWT Authentication and Basic Authentication capabilities, implemented with the help of Spring Security, one of can which can be applied at a time to authorize users while they login in inside.
+A todo app is generated using Spring Boot and Angular JS which talks to in-memory H2 database to perform CRUD operations on todo table. This application has implemented both JWT Authentication and Basic Authentication capabilities, with the help of Spring Security, one of can which can be applied at a time to verify user credentials.
 To create this project, I have taken help of the course Go Java Full Stack With Spring Boot and Angular by in28minutes official.
 
 # Credentials: 
