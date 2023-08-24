@@ -114,4 +114,7 @@ The different routes can be checked inside app-routing.module.ts. The specific c
     fetch the value of this token through session storage and sent it as part of their authorization header.
 
 3. Basic Authentication:
-   Principle: A Base 64 encoded(username + password ) combination is sent each time with api requests to the backend so as to authorize the correct credentials are entered at the time of login and the authorized user only performs all other actions.
+   Principle: A Base 64 encoded(username + password ) combination is sent each time with api requests to the backend so as to authorize the correct credentials are entered at the     time of login and the authorized user only performs all other actions.
+   Implementation: On the client-side, executeAuthenticationService() method inside BasicAuthenticationService verifies if the basicAuthHeaderString(formed with the help of Base 
+     64 encoding of username and password) is correct. If it is correct, it is stored in the session storage. After logging in, whenever other api's are invoked, 
+     HttpIntercepterBasicAuthService intercepts the http requests, and adds basicAuthHeaderString in request header before request is sent to server. 
