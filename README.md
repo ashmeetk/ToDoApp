@@ -120,5 +120,11 @@ The different routes can be checked inside app-routing.module.ts. The specific c
      HttpIntercepterBasicAuthService intercepts the http requests, and adds basicAuthHeaderString in request header before request is sent to server.
    Our current project doesn't use Basic Auth. To change the project to use basic Auth: 
     Backend:
-      
+      a. change package name from to com.ashmeet.rest.webservices.restfulwebservices.basic.auth
+      b. change package name from to 
+      c. uncomment following two lines and comment jwt url like below.
+          spring.security.user.name=ashmeet
+          spring.security.user.password=dummy
+          #jwt.get.token.uri=/authenticate
+
     Frontend: 
