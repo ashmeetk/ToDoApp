@@ -128,3 +128,4 @@ The different routes can be checked inside app-routing.module.ts. The specific c
           #jwt.get.token.uri=/authenticate
 
     Frontend: 
+      Inside login.component.html, uncomment line 9 containing handleBasicAuthLogin() method and comment line 10: handleJWTAuthLogin() method.
