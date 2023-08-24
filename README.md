@@ -83,6 +83,7 @@ Authorization: Select Bearer token and in token field paste the JWT token that w
 6. TodoJpaResource class: Controller with all apis
 
 # Frontend using AngularJS:
+After going into todo folder, run npm i to install node_modules and package-lock.json.
 To start angular application, type ng serve and search http://localhost:4200/ in chrome. Password('dummy') is pre-filled in by default. Press enter to login into app. 
 
 # Components used:
@@ -129,3 +130,6 @@ The different routes can be checked inside app-routing.module.ts. The specific c
 
     Frontend: 
       Inside login.component.html, uncomment line 9 containing handleBasicAuthLogin() method and comment line 10: handleJWTAuthLogin() method.
+
+# CORS 
+  For CORS configuration, check SpringSecurityConfigurationBasicAuth java class. I don't think for JWT, we use CORS configuration.
